@@ -34,24 +34,30 @@ h2{
 /* End GLOBAL */
 
 header{
+    position: relative;
+}
+
+header .logo{
     width: 100%;
     height: 75px;
 
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 header i{
     font-size: 20px;
-    padding: 20px;
+    padding: 27px;
+    position: absolute;
 }
 
-header a{
+header .logo a{
     display: flex;
     justify-content: center;
 }
 
-header a img{
+header .logo a img{
     width: 50%;
     margin-left: -60px;
 }

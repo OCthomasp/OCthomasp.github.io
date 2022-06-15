@@ -28,9 +28,10 @@ a{
     text-decoration: none;
 }
 
-h2{
+h1{
     font-family: 'Shrikhand', sans-serif; 
 }
+
 /* End GLOBAL */
 
 header{
@@ -59,7 +60,6 @@ header .logo a{
 
 header .logo a img{
     width: 50%;
-    margin-left: -60px;
 }
 
 #back-picture{
@@ -121,7 +121,20 @@ header .logo a img{
 }
 
 #menu form fieldset legend{
-    box-shadow: 0px 3px 0px 0px  var(--third-color);
+    text-transform: uppercase;
+    font-weight: 400;
+    position: relative;
+    padding: 0 0 5px 0;
+}
+
+#menu form fieldset legend::after{
+    content: "";
+    width: 30px;
+    height: 3px;
+    background-color: var(--third-color);
+    position: absolute;
+    left: 0;
+    bottom: 0;
 }
 
 #menu form input{
@@ -200,7 +213,7 @@ header .logo a img{
 
 
 #menu form button{
-    background: linear-gradient(163deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 61%); 
+    background: linear-gradient(163deg, var(--second-color) 0%, var(--main-color) 61%); 
     border: none;
     color: var(--white-color);
     padding: 15px 32px;
@@ -212,24 +225,9 @@ header .logo a img{
 }
 
 #menu form button:hover{
-    /* background: linear-gradient(163deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 61%); */
-    background: linear-gradient(163deg, rgba(255,121,218,1) 27%, rgba(147,86,220,1) 82%);
+    background: linear-gradient(163deg, var(--second-color) 27%, var(--main-color) 82%);
     transform: scale(1.01);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 footer{
     background-color: var(--darker-color);
@@ -237,7 +235,7 @@ footer{
 }
 
 footer img{
-    width: 40%;
+    width: 120px;
     filter: brightness(9999%); 
     margin: 10px 0;
 }
@@ -259,3 +257,26 @@ footer ul li a{
     color: white;
 }
 
+@media screen and (min-width: 1030px) {
+    #menu{
+        width: auto;
+    }
+
+    #menu form{
+        flex-flow: row wrap;
+        column-gap: 3%;
+    }
+
+    fieldset{
+        width: 30%;
+    }
+
+    #menu form button{
+        width: 30%;
+        margin: auto;
+    }
+
+    #back-picture img{
+        height: 430px;
+    }
+  }

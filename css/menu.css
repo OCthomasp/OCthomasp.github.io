@@ -171,9 +171,104 @@ header .logo a img{
     overflow: hidden;
     /* max-width: 100%; */
 
-    
-
 }
+
+
+/* EXPERIMENTAL */
+
+
+
+
+#menu form .exp{
+    background-color: #fff;
+    padding: 1rem;
+    display: flex;
+    border-radius: .75rem;
+    margin: 1rem 0;
+    box-shadow: 0 4px 8px 0 var(--hard-shadow-color);
+    overflow: hidden;
+    cursor: pointer;
+
+    max-width: 100%;
+  }
+
+#menu form .exp header{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    flex: 1;
+}
+
+#menu form .exp header h4{
+    margin: 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+#menu form .exp header p{
+    margin: 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+#menu form .exp .prix{
+    font-weight: 700;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding-left: .5rem;
+}
+
+#menu form .exp .checkmark{
+    background-color: #99e2d0;
+    margin: -1rem -7rem -1rem 1rem;
+    width: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition-duration: .5s;
+}
+
+#menu form .exp:hover .checkmark{
+    margin-right: -1rem;
+}
+
+#menu form .exp:hover .checkmark-block{
+    animation: rotation .5s;
+}
+
+#menu form .exp .checkmark-block{
+    height: 2rem;
+    width: 2rem;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+}
+
+@keyframes rotation{
+    0% {
+        transform: rotate(-280deg)
+    }
+    100%{
+        transform: rotate(0)
+    }
+} 
+
+
+/* FIN EXPMTL */
+
+
+
+
+
+
+
+
+
 
 
 #menu form label h3{
@@ -205,8 +300,8 @@ header .logo a img{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 60px;
-    margin: -10px -50px -10px 10px;
+    width: 4rem;
+    margin: -1rem -5rem -1rem 1rem;
 
     background-color: var(--third-color);
 }

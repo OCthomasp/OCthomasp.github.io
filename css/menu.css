@@ -78,12 +78,17 @@ header .logo a img{
     border-radius: 35px;
     margin-top: -50px;
     position: relative;
+
 }
 
 #menu .nom-restaurant{
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+#menu .nom-restaurant h1{
+    font-size: 2.6rem;
 }
 
 .favori{
@@ -95,15 +100,24 @@ header .logo a img{
 .favori .fa-solid{
     color: var(--main-color);
     display: none;
+    transition: opacity .5s;
+    opacity : 0.5;
 }
 
-.favori:hover>.fa-solid{
-    color: var(--main-color);
+.favori:hover>.fa-solid{ 
     display: unset;
+    background: -webkit-gradient(linear, left top, left bottom, from(var(--second-color)), to(var(--main-color)));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+    background-clip: 0;
 }
 
 .favori:hover>.fa-regular{
     display: none;
+}
+
+.fa-solid:hover{
+	opacity: 1;
 }
 
 #menu form{
@@ -156,6 +170,9 @@ header .logo a img{
     cursor: pointer;
     overflow: hidden;
     /* max-width: 100%; */
+
+    
+
 }
 
 
@@ -226,7 +243,8 @@ header .logo a img{
 
 #menu form button:hover{
     background: linear-gradient(163deg, var(--second-color) 27%, var(--main-color) 82%);
-    transform: scale(1.01);
+    box-shadow: 0 8px 16px 0 var(--hard-shadow-color);
+    transform: scale(1.02);
 }
 
 footer{

@@ -1,455 +1,307 @@
-/* GLOBAL */
-:root{
-    --main-color : #9356DC;
-    --second-color : #FF79DA;
-    --third-color : #99E2D0;
-    --white-color : #FFFFFF;
-    --light-color : #DEEBFF;
-    --dark-color : #EAEAEA;
-    --darker-color : #353535;
-    --back-color : #F6F6F6;
-    --border-color: #D9D9D9;
-    --soft-shadow-color: rgba(0, 0, 0, 0.05);
-    --hard-shadow-color: rgba(0, 0, 0, 0.2);
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
 }
 
-* {box-sizing : border-box}
-
-
-html {font-size : 62.5%}
+html {
+  font-size: 62.5%;
+}
 
 body {
-    font-family: 'Roboto', sans-serif; 
-    font-size: 1.8rem; 
+  font-family: "Roboto", sans-serif;
+  font-size: 1.8rem;
 }
 
-a{
-    color: black;
-    text-decoration: none;
+a {
+  color: black;
+  text-decoration: none;
 }
 
-h1{
-    font-family: 'Shrikhand', sans-serif; 
+h1 {
+  font-family: "Shrikhand", sans-serif;
 }
 
-/* End GLOBAL */
-
-header{
-    position: relative;
+#page_header {
+  position: relative;
+}
+#page_header .logo {
+  width: 100%;
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#page_header .logo a {
+  display: flex;
+  justify-content: center;
+}
+#page_header .logo a img {
+  width: 50%;
+}
+#page_header i {
+  font-size: 20px;
+  padding: 27px;
+  position: absolute;
 }
 
-header .logo{
-    width: 100%;
-    height: 75px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.favori {
+  font-size: 30px;
+  margin: 0 20px 10px 0;
+  cursor: pointer;
+}
+.favori .fa-solid {
+  color: #9356DC;
+  display: none;
+  transition: opacity 0.5s;
+  opacity: 0.5;
+}
+.favori .fa-solid:hover {
+  opacity: 1;
+}
+.favori:hover {
+  opacity: 1;
+}
+.favori:hover > .fa-solid {
+  display: unset;
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: 0;
+}
+.favori:hover > .fa-regular {
+  display: none;
 }
 
-header i{
-    font-size: 20px;
-    padding: 27px;
-    position: absolute;
+main #back-picture {
+  position: relative;
 }
-
-header .logo a{
-    display: flex;
-    justify-content: center;
+main #back-picture img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
 }
-
-header .logo a img{
-    width: 50%;
+main #menu {
+  background-color: #fff;
+  padding: 15px 15px 25px 15px;
+  border-radius: 35px;
+  margin-top: -50px;
+  position: relative;
 }
-
-#back-picture{
-    position: relative;
+main #menu .nom-restaurant {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-
-#back-picture img{
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
+main #menu .nom-restaurant h1 {
+  font-size: 2.6rem;
 }
-
-#menu{
-    background-color: var(--back-color);
-    padding: 15px 15px 25px 15px;
-    border-radius: 35px;
-    margin-top: -50px;
-    position: relative;
-
+main #menu form {
+  display: flex;
+  flex-flow: column;
+  margin-bottom: 30px;
 }
-
-#menu .nom-restaurant{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+main #menu form fieldset {
+  display: flex;
+  flex-direction: column;
+  border: none;
+  padding: 0;
+  margin-bottom: 30px;
 }
-
-#menu .nom-restaurant h1{
-    font-size: 2.6rem;
+main #menu form fieldset legend {
+  text-transform: uppercase;
+  font-weight: 400;
+  position: relative;
+  padding: 0 0 5px 0;
 }
-
-.favori{
-    font-size: 30px;
-    margin: 0 20px 10px 0;
-    cursor: pointer;
+main #menu form fieldset legend::after {
+  content: "";
+  width: 30px;
+  height: 3px;
+  background-color: #99E2D0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
 }
-
-.favori .fa-solid{
-    color: var(--main-color);
-    display: none;
-    transition: opacity .5s;
-    opacity : 0.5;
+main #menu form fieldset input {
+  position: absolute;
+  left: -9999px;
 }
-
-.favori:hover>.fa-solid{ 
-    display: unset;
-    background: -webkit-gradient(linear, left top, left bottom, from(var(--second-color)), to(var(--main-color)));
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-    background-clip: 0;
+main #menu form fieldset label {
+  opacity: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  cursor: pointer;
+  max-width: 100%;
 }
-
-.favori:hover>.fa-regular{
-    display: none;
+main #menu form fieldset label header, main #menu form fieldset label header > * {
+  flex: 1;
+  white-space: nowrap; /* pas de retour à la ligne */
+  text-overflow: ellipsis; /* affiche "..." */
+  overflow: hidden; /* cache le texte qui dépasse */
+  margin: 0;
 }
-
-.fa-solid:hover{
-	opacity: 1;
+main #menu form fieldset label .prix {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  font-weight: 700;
+  padding-left: 0.5rem;
 }
-
-#menu form{
-    display: flex;
-    flex-flow: column;
-    margin-bottom: 30px;
+main #menu form fieldset label .checkmark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #99E2D0;
+  width: 6rem;
+  margin: -1rem -7rem -1rem 1rem;
+  transition-duration: 0.5s;
 }
-
-#menu form fieldset{
-    display: flex;
-    flex-direction: column;
-    border: none;
-    padding: 0;
-    margin-bottom: 30px;
+main #menu form fieldset label .checkmark .checkmark-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.5rem;
+  width: 2.5rem;
+  background-color: #fff;
+  border-radius: 100px;
 }
-
-#menu form fieldset legend{
-    text-transform: uppercase;
-    font-weight: 400;
-    position: relative;
-    padding: 0 0 5px 0;
+main #menu form fieldset label .checkmark .checkmark-block i {
+  font-size: 20px;
+  color: #99E2D0;
 }
-
-#menu form fieldset legend::after{
-    content: "";
-    width: 30px;
-    height: 3px;
-    background-color: var(--third-color);
-    position: absolute;
-    left: 0;
-    bottom: 0;
+main #menu form fieldset label:hover .checkmark {
+  margin-right: -1rem;
 }
-
-#menu form input{
-    position: absolute;
-    left: -9999px;
+main #menu form fieldset label:hover .checkmark-block {
+  animation: rotation 0.5s;
 }
-
-#menu form label{
-    opacity: 0;
-    margin: 10px 0px;
-    padding: 10px 15px 10px 10px;
-    background-color: var(--white-color);
-    border-radius: 10px;
-    box-shadow: 0 4px 8px 0 var(--hard-shadow-color);
-
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    
-    cursor: pointer;
-    overflow: hidden;
-    /* max-width: 100%; */
-
-
-
-}
-
-
-/* CHECKMARK */
-
-#menu form .exp{
-    background-color: #fff;
-    padding: 1rem;
-    display: flex;
-    border-radius: .75rem;
-    margin: 1rem 0;
-    box-shadow: 0 4px 8px 0 var(--hard-shadow-color);
-    overflow: hidden;
-    cursor: pointer;
-
-    max-width: 100%;
+@keyframes rotation {
+  0% {
+    transform: rotate(-280deg);
   }
-
-#menu form .exp header{
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    flex: 1;
+  100% {
+    transform: rotate(0);
+  }
 }
-
-#menu form .exp header h4{
-    margin: 0;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-}
-
-#menu form .exp header p{
-    margin: 0;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-}
-
-#menu form .exp .prix{
-    font-weight: 700;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    padding-left: .5rem;
-}
-
-#menu form .exp .checkmark{
-    background-color: #99e2d0;
-    margin: -1rem -7rem -1rem 1rem;
-    width: 6rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition-duration: .5s;
-}
-
-#menu form .exp:hover .checkmark{
-    margin-right: -1rem;
-}
-
-#menu form .exp:hover .checkmark-block{
-    animation: rotation .5s;
-}
-
-#menu form .exp .checkmark-block{
-    height: 2.5rem;
-    width: 2.5rem;
-    background-color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 100px;
-}
-
-@keyframes rotation{
-    0% {
-        transform: rotate(-280deg)
-    }
-    100%{
-        transform: rotate(0)
-    }
-} 
-
-/*  FIN CHECKMARK */
-
-/* ANIM LOAD */
 @keyframes onLoad {
-    0% {
-        opacity: 0%;
-        transform: translateY(15%);
-    }
-    50%{
-        transform: translateY(-15%);
-        opacity: 25%;
-    }
-    100% {
-        opacity: 100%;
-        transform: translateY(0);
-    }
-}
-
-.order1{
-    animation: onLoad 1s ease-in-out forwards;
-    animation-delay: 0ms;
-}
-
-.order2{
-    animation: onLoad 1s ease-in-out forwards;
-    animation-delay: 200ms;
-}
-
-.order3{
-    animation: onLoad 1s ease-in-out forwards;
-    animation-delay: 400ms;
-}
-
-.order4{
-    animation: onLoad 1s ease-in-out forwards;
-    animation-delay: 600ms;
-}
-
-.order5{
-    animation: onLoad 1s ease-in-out forwards;
-    animation-delay: 800ms;
-}
-
-.order6{
-    animation: onLoad 1s ease-in-out forwards;
-    animation-delay: 1000ms;
-}
-
-.order7{
-    animation: onLoad 1s ease-in-out forwards;
-    animation-delay: 1200ms;
-}
-
-.order8{
-    animation: onLoad 1s ease-in-out forwards;
-    animation-delay: 1400ms;
-}
-
-.order9{
-    animation: onLoad 1s ease-in-out forwards;
-    animation-delay: 1600ms;
-}
-
-
-/* FIN ANIM LOAD */
-
-
-#menu form label h3{
-    width: 100%;
-    
-    margin: 0;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-}
-
-#menu form label p{
-    max-width: 80%;
-    margin: 0; 
-    overflow: hidden; /* cache le texte qui dépasse */
-    white-space: nowrap; /* pas de retour à la ligne */
-    text-overflow: ellipsis; /*...*/
-}
-
-#menu form label .prix{
-    font-weight: 900;
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
-    padding-left: 5px;
-}
-
-#menu form label .checkmark{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 4rem;
-    margin: -1rem -5rem -1rem 1rem;
-
-    background-color: var(--third-color);
-}
-
-#menu form label .checkmark-block{
-    height: 16px;
-    width: 16px;
-    background-color: var(--white-color);
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 100px;
-}
-
-#menu form label div i{
-    font-size: 20px;
-    color: var(--third-color)
-}
-
-
-
-#menu form button{
-    background: linear-gradient(163deg, var(--second-color) 0%, var(--main-color) 61%); 
-    border: none;
-    color: var(--white-color);
-    padding: 15px 32px;
-    border-radius: 22px;
-    box-shadow: 0 4px 8px 0 var(--hard-shadow-color);
-    cursor: pointer;
-    align-self: center;
-    width: 60%;
-}
-
-#menu form button:hover{
-    background: linear-gradient(163deg, var(--second-color) 27%, var(--main-color) 82%);
-    box-shadow: 0 8px 16px 0 var(--hard-shadow-color);
-    transform: scale(1.02);
-}
-
-footer{
-    background-color: var(--darker-color);
-    padding: 15px 15px 40px 15px;
-}
-
-footer img{
-    width: 120px;
-    filter: brightness(9999%); 
-    margin: 10px 0;
-}
-
-
-footer ul{
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-footer ul i{
-    font-size: 15px;
-    width: 18px;
-}
-
-footer ul li a{
-    line-height: 2;
-    color: white;
-}
-
-/* @media screen and (min-width: 1030px) { */
-@media screen and (min-width: 1300px) {
-    #menu{
-        width: 80%;
-        margin-left: 10%;
-    }
-
-    #menu form{
-        flex-flow: row wrap;
-        column-gap: 3%;
-    }
-
-    fieldset{
-        width: 30%;
-    }
-
-    #menu form button{
-        width: 30%;
-        margin: auto;
-    }
-
-    #back-picture img{
-        height: 430px;
-    }
-
-    footer{
-        padding-left: 10%;
-    }
+  0% {
+    opacity: 0%;
+    transform: translateY(15%);
   }
+  50% {
+    transform: translateY(-15%);
+    opacity: 25%;
+  }
+  100% {
+    opacity: 100%;
+    transform: translateY(0);
+  }
+}
+main #menu form fieldset .order1 {
+  animation: onLoad 1s ease-in-out forwards;
+  animation-delay: 0ms;
+}
+main #menu form fieldset .order2 {
+  animation: onLoad 1s ease-in-out forwards;
+  animation-delay: 200ms;
+}
+main #menu form fieldset .order3 {
+  animation: onLoad 1s ease-in-out forwards;
+  animation-delay: 400ms;
+}
+main #menu form fieldset .order4 {
+  animation: onLoad 1s ease-in-out forwards;
+  animation-delay: 600ms;
+}
+main #menu form fieldset .order5 {
+  animation: onLoad 1s ease-in-out forwards;
+  animation-delay: 800ms;
+}
+main #menu form fieldset .order6 {
+  animation: onLoad 1s ease-in-out forwards;
+  animation-delay: 1000ms;
+}
+main #menu form fieldset .order7 {
+  animation: onLoad 1s ease-in-out forwards;
+  animation-delay: 1200ms;
+}
+main #menu form fieldset .order8 {
+  animation: onLoad 1s ease-in-out forwards;
+  animation-delay: 1400ms;
+}
+main #menu form fieldset .order9 {
+  animation: onLoad 1s ease-in-out forwards;
+  animation-delay: 1600ms;
+}
+main #menu form #btn_commande {
+  background: linear-gradient(163deg, #FF79DA 0%, #9356DC 61%);
+  border: none;
+  color: #FFFFFF;
+  padding: 15px 32px;
+  border-radius: 22px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  align-self: center;
+  width: 60%;
+}
+main #menu form #btn_commande:hover {
+  background: linear-gradient(163deg, #FF79DA 27%, #9356DC 82%);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  transform: scale(1.02);
+}
+
+footer {
+  background-color: #353535;
+  padding: 15px 15px 40px 15px;
+}
+footer img {
+  width: 12rem;
+  margin: 1rem 0;
+  filter: brightness(9999%);
+}
+footer ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+footer ul i {
+  font-size: 15px;
+  width: 18px;
+}
+footer ul li a {
+  line-height: 2;
+  color: #fff;
+}
+
+@media screen and (min-width: 1300px) {
+  main #back-picture img {
+    height: 430px;
+  }
+  main #menu {
+    width: 80%;
+    margin-left: 10%;
+  }
+  main #menu form {
+    flex-flow: row wrap;
+    column-gap: 3%;
+  }
+  main #menu form fieldset {
+    width: 30%;
+  }
+  main #menu form #btn_commande {
+    width: 30%;
+    margin: auto;
+  }
+  footer {
+    padding-left: 10%;
+  }
+}
+
+/*# sourceMappingURL=menu.css.map */

@@ -1,0 +1,204 @@
+@import 'mixins';
+@import 'global';
+@import 'footer';
+
+#page_header{
+    @include flex;
+    width: 100%;
+    height: 75px;
+    box-shadow: 0 4px 8px 0 $hard-shadow-color;
+    position: relative;
+    a{
+        @include flex;
+        img{
+            width: 50%;
+        }
+    }
+}
+
+#geo{
+    @include flex;
+    margin: 0;
+    height: 60px;
+    background-color: $dark-color;
+    i{
+        margin-left: -10px;
+        margin-right: 10px;
+    }
+    p{ 
+        margin: 0; 
+    }
+}
+
+#explorer{
+    @include flex;
+    flex-direction: column;
+
+    text-align: center;
+    padding: 15px 15px 40px 15px;
+    background-color: $back-color;
+
+    h2{
+        margin : 15px 0 0 0;
+    }
+    button{
+        background: linear-gradient(163deg, $second-color 0%, $main-color 61%); 
+        border: none;
+        color: $white-color;
+        padding: 15px 20px;
+        border-radius: 22px;
+        box-shadow: 0 4px 8px 0 $hard-shadow-color;
+        cursor: pointer;
+        align-self: center;
+        
+        &:hover{
+            background: linear-gradient(163deg, $second-color 27%, $main-color 82%);
+            box-shadow: 0 8px 16px 0 $hard-shadow-color;
+            transform: scale(1.02);
+        }
+    }
+}
+
+#tuto{
+    max-width: 1300px;
+    margin: auto;
+    padding: 4rem 0;
+    h2{
+        margin: 1rem 0;
+    }
+    #etapes{
+        @include flex;
+        flex-direction: column;
+        .etape{
+            @include flex($justify: flex-start);
+
+            width: 95%;
+            padding: 10px;
+            margin: 10px 0;
+
+            background-color: $back-color;
+            border-radius: 25px;
+
+            box-shadow: 0 4px 8px 0 $hard-shadow-color;
+            &:hover{
+                background-color: #F5EDFF;
+            }
+            &:hover>i{
+                color: $main-color;
+            }
+            & *{
+                margin-right: 2rem;
+            }
+
+            .circle{
+                border-radius: 50%;
+                width: 25px;
+                height: 25px;
+                padding: 2px;
+                background: $main-color;
+                color: $white-color;
+                text-align: center;
+                margin-left: -2rem;
+            }
+        }
+    }
+}
+
+.restaurant-list-container{
+    background-color: $back-color;
+    #restaurants{
+        display: grid;
+        padding : 4rem 0;
+        max-width: 1300px;
+        margin: auto;
+    
+        article{
+            background-color: $white-color;
+            border-radius: 15px;
+            margin: 5px 5px 20px 5px;
+            box-shadow: 4px 4px 4px 0 $soft-shadow-color, 0 4px 4px 0 $soft-shadow-color;
+            cursor: pointer;
+            &:hover{
+                transform: scale(1.01);
+            }
+            
+            a{
+                padding: 0;
+                position: relative;
+                img{
+                    object-fit: cover;
+                    height: 150px;
+                    width: 100%;
+                    border-radius: 15px 15px 0 0;   
+                }
+                .new-item{
+                    @include flex;
+                    
+                    background-color: $third-color;
+                    color: #008766;
+                    width: 87px;
+                    height: 32px;
+                    position: absolute;
+                    right: 1rem;
+                    top: -12rem;
+                }
+                .lower-card{
+                    @include flex($justify: space-between);
+                    .card-text{
+                        padding: 10px 15px;
+                        & *{
+                            margin: 0 0 5px 0;
+                        }
+                    }
+                    // COEUR
+                    .favori{
+                        font-size: 30px;
+                        margin: 0 20px 10px 0;
+                        cursor: pointer;
+                        .fa-solid{
+                            color: $main-color;
+                            display: none;
+                            transition: opacity .5s;
+                            opacity : 0.5;
+                            &:hover{
+                                opacity: 1;
+                            }
+                        }
+                        &:hover{
+                            opacity: 1;
+                        }
+                        &:hover>.fa-solid{
+                            display: unset;
+                            background: -webkit-gradient(linear, left top, left bottom, from($second-color), to($main-color));
+                            -webkit-background-clip: text;
+                            -webkit-text-fill-color: transparent;
+                            background-clip: 0;
+                        }
+                        &:hover>.fa-regular{
+                            display: none;
+                        }
+                    }
+                    // FIN COEUR
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1050px) {
+    #tuto #etapes{
+        flex-direction: row;
+        justify-content: space-between;
+        .etape{
+            width: 30%;
+        }
+    }
+
+    #restaurants{
+        grid-template-columns: repeat(2,1fr);
+        column-gap: 3%;
+        h2{
+            grid-column: 1/-1;
+        }
+    }
+}

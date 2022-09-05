@@ -21,18 +21,68 @@ h1 {
   font-family: "Shrikhand", sans-serif;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.8rem;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+h1 {
+  font-family: "Shrikhand", sans-serif;
+}
+
+footer {
+  background-color: #353535;
+  padding: 15px 0 40px 0;
+}
+footer .footer-container {
+  max-width: 1300px;
+  margin: auto;
+}
+footer .footer-container img {
+  width: 12rem;
+  margin: 1rem 0;
+  filter: brightness(9999%);
+}
+footer .footer-container ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+footer .footer-container ul li a {
+  line-height: 2;
+  color: #fff;
+}
+footer .footer-container ul li a i {
+  font-size: 15px;
+  width: 18px;
+}
+
 #page_header {
   position: relative;
 }
 #page_header .logo {
-  width: 100%;
-  height: 75px;
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
+  height: 75px;
 }
 #page_header .logo a {
   display: flex;
+  align-items: center;
   justify-content: center;
 }
 #page_header .logo a img {
@@ -81,11 +131,14 @@ main #back-picture img {
   object-fit: cover;
 }
 main #menu {
-  background-color: #fff;
+  background-color: #F6F6F6;
   padding: 15px 15px 25px 15px;
   border-radius: 35px;
   margin-top: -50px;
   position: relative;
+  max-width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
 }
 main #menu .nom-restaurant {
   display: flex;
@@ -240,6 +293,10 @@ main #menu form fieldset .order9 {
   animation: onLoad 1s ease-in-out forwards;
   animation-delay: 1600ms;
 }
+main #menu form fieldset .order10 {
+  animation: onLoad 1s ease-in-out forwards;
+  animation-delay: 1800ms;
+}
 main #menu form #btn_commande {
   background: linear-gradient(163deg, #FF79DA 0%, #9356DC 61%);
   border: none;
@@ -257,38 +314,12 @@ main #menu form #btn_commande:hover {
   transform: scale(1.02);
 }
 
-footer {
-  background-color: #353535;
-  padding: 15px 15px 40px 15px;
-}
-footer img {
-  width: 12rem;
-  margin: 1rem 0;
-  filter: brightness(9999%);
-}
-footer ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-footer ul i {
-  font-size: 15px;
-  width: 18px;
-}
-footer ul li a {
-  line-height: 2;
-  color: #fff;
-}
-
-@media screen and (min-width: 1300px) {
+@media screen and (min-width: 1050px) {
   main #back-picture img {
     height: 430px;
   }
-  main #menu {
-    width: 80%;
-    margin-left: 10%;
-  }
   main #menu form {
+    justify-content: center;
     flex-flow: row wrap;
     column-gap: 3%;
   }
@@ -298,9 +329,6 @@ footer ul li a {
   main #menu form #btn_commande {
     width: 30%;
     margin: auto;
-  }
-  footer {
-    padding-left: 10%;
   }
 }
 

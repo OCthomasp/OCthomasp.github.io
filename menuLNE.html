@@ -10,7 +10,7 @@
         <link rel="stylesheet" type="text/css" href="css/normalize.css">
         <link rel="stylesheet" type="text/css" href="css/menu.css">
         
-        <title>ohmyfood - La palette du goût</title>
+        <title>ohmyfood - La note enchantée</title>
     </head>
     
     <body>
@@ -28,12 +28,12 @@
        
         <main>
             <div id="back-picture">
-                <img src="img\restaurants/jay-wennington.jpg" alt="La palette du goût">
+                <img src="img\restaurants/stil.jpg" alt="La note enchantée">
             </div>
 
             <section id="menu">
                 <div class="nom-restaurant">
-                    <h1>La palette du goût</h1>
+                    <h1>La note enchantée</h1>
                     <div class="favori">
                         <i class="fa-regular fa-heart"></i>
                         <i class="fa-solid fa-heart fa-gradient"></i>
@@ -43,11 +43,11 @@
                     <fieldset>
                         <legend>Entrees</legend>
 
-                        <input type="checkbox" id="escargot" name="escargot">
-                        <label for="escargot" class="order1">
+                        <input type="checkbox" id="ravioles" name="ravioles">
+                        <label for="ravioles" class="order1">
                             <header>
-                                <h4>Fricassée d'escargot</h4>
-                                <p>Au piment d'espelette</p>
+                                <h4>Ravioles de foie gras</h4>
+                                <p>Accompagnés de leur crème à la truffe</p>
                             </header>
                             <div class="prix">25€</div>
                             <div class="checkmark">
@@ -57,11 +57,11 @@
                             </div>
                         </label>
 
-                        <input type="checkbox" id="foiegras" name="foiegras">
-                        <label for="foiegras"class="order2">
+                        <input type="checkbox" id="caviar" name="caviar">
+                        <label for="caviar"class="order2">
                             <header>
-                                <h4>Foie gras de canard mi-cuit</h4>
-                                <p>Et ses copeaux de truffe noire</p>
+                                <h4>Caviar osciètre</h4>
+                                <p>Sur blini à la farine de blé noir</p>
                             </header>
                             <div class="prix">35€</div>
                             <div class="checkmark">
@@ -71,11 +71,11 @@
                             </div>
                         </label>
                         
-                        <input type="checkbox" id="oeuf" name="oeuf">
-                        <label for="oeuf" class="order3">
+                        <input type="checkbox" id="homard" name="homard">
+                        <label for="homard" class="order3">
                             <header>
-                                <h4>Oeuf au plat</h4>
-                                <p>Assaisonné à la truffe sur lit de caviar</p>
+                                <h4>Homard et espuma de potiron</h4>
+                                <p>Mariné aux zestes d'orange</p>
                             </header>
                             <div class="prix">20€</div>
                             <div class="checkmark">
@@ -84,17 +84,30 @@
                                 </div>
                             </div>
                         </label>
-                        
+
+                        <input type="checkbox" id="foie-gras" name="foie-gras">
+                        <label for="foie-gras" class="order4">
+                            <header>
+                                <h4>Foie gras de canard cuit entier</h4>
+                                <p>Confiture de figue et pain toasté</p>
+                            </header>
+                            <div class="prix">35€</div>
+                            <div class="checkmark">
+                                <div class="checkmark-block">
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+                            </div>
+                        </label>
                     </fieldset>
 
                     <fieldset>
                         <legend>Plats</legend>
-
-                        <input type="checkbox" id="filet-boeuf" name="filet-boeuf">
-                        <label for="filet-boeuf" class="order4">
+                        
+                        <input type="checkbox" id="st-jacques" name="st-jacques">
+                        <label for="st-jacques" class="order5">
                             <header>
-                                <h4>Filet de boeuf aux herbes</h4>
-                                <p>Accompagné de sa ribambelle de légumes</p>
+                                <h4>Noix de coquilles Saint-Jacques</h4>
+                                <p>Sur lit de purée de céleri-rave</p>
                             </header>
                             <div class="prix">40€</div>
                             <div class="checkmark">
@@ -104,12 +117,11 @@
                             </div>
                         </label>
                         
-                        
-                        <input type="checkbox" id="queue-boeuf" name="queue-boeuf">
-                        <label for="queue-boeuf"class="order5">
+                        <input type="checkbox" id="langoustine" name="langoustine">
+                        <label for="langoustine"class="order6">
                             <header>
-                                <h4>Parmentier de queue de boeuf</h4>
-                                <p>À la truffe noire sur sa purée de panais</p>
+                                <h4>Langoustine poêlée</h4>
+                                <p>Purée de patate douce</p>
                             </header>
                             <div class="prix">35€</div>
                             <div class="checkmark">
@@ -119,11 +131,11 @@
                             </div>
                         </label>
                         
-                        <input type="checkbox" id="turbot" name="turbot">
-                        <label for="turbot"class="order6">
+                        <input type="checkbox" id="mijote" name="mijote">
+                        <label for="mijote"class="order7">
                             <header>
-                                <h4>Filet de turbot</h4>
-                                <p>Aux agrumes</p>
+                                <h4>Mijoté de queue de boeuf</h4>
+                                <p>Et riz sauvage aux zestes de citron</p>
                             </header>
                             <div class="prix">44€</div>
                             <div class="checkmark">
@@ -136,12 +148,12 @@
 
                     <fieldset>
                         <legend>Desserts</legend>
-                        
-                        <input type="checkbox" id="paris-brest" name="paris-brest">
-                        <label for="paris-brest"class="order7">
+
+                        <input type="checkbox" id="macaron" name="macaron">
+                        <label for="macaron"class="order8">
                             <header>
-                                <h4>Paris-Brest</h4>
-                                <p>Revisité</p>
+                                <h4>Macaron noisette et chocolat</h4>
+                                <p>Glace au caramel brun et sel de Guérande</p>
                             </header>
                             <div class="prix">18€</div>
                             <div class="checkmark">
@@ -151,11 +163,11 @@
                             </div>
                         </label>
                         
-                        <input type="checkbox" id="macaron" name="macaron">
-                        <label for="macaron"class="order8">
+                        <input type="checkbox" id="baba" name="baba">
+                        <label for="baba"class="order9">
                             <header>
-                                <h4>Macaron au chocolat d'exception</h4>
-                                <p>Et glace à la vanille de Madagascar</p>
+                                <h4>Baba au rhum revisité</h4>
+                                <p>Avec son coulis de citron</p>
                             </header>
                             <div class="prix">22€</div>
                             <div class="checkmark">
@@ -165,11 +177,11 @@
                             </div>
                         </label>
                         
-                        <input type="checkbox" id="mousse" name="mousse">
-                        <label for="mousse"class="order9">
+                        <input type="checkbox" id="tarte-citron" name="tarte-citron">
+                        <label for="tarte-citron"class="order10">
                             <header>
-                                <h4>Mousse au chocolat</h4>
-                                <p>Au piment d'Espelette et à la truffe noire</p>
+                                <h4>Tarte au citron meringuée</h4>
+                                <p>Déstructurée</p>
                             </header>
                             <div class="prix">23€</div>
                             <div class="checkmark">

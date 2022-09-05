@@ -1,0 +1,276 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.8rem;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+h1 {
+  font-family: "Shrikhand", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.8rem;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+h1 {
+  font-family: "Shrikhand", sans-serif;
+}
+
+footer {
+  background-color: #353535;
+  padding: 15px 0 40px 0;
+}
+footer .footer-container {
+  max-width: 1300px;
+  margin: auto;
+}
+footer .footer-container img {
+  width: 12rem;
+  margin: 1rem 0;
+  filter: brightness(9999%);
+}
+footer .footer-container ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+footer .footer-container ul li a {
+  line-height: 2;
+  color: #fff;
+}
+footer .footer-container ul li a i {
+  font-size: 15px;
+  width: 18px;
+}
+
+#page_header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 75px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+#page_header a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#page_header a img {
+  width: 50%;
+}
+
+#geo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  height: 60px;
+  background-color: #EAEAEA;
+}
+#geo i {
+  margin-left: -10px;
+  margin-right: 10px;
+}
+#geo p {
+  margin: 0;
+}
+
+#explorer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 15px 15px 40px 15px;
+  background-color: #F6F6F6;
+}
+#explorer h2 {
+  margin: 15px 0 0 0;
+}
+#explorer button {
+  background: linear-gradient(163deg, #FF79DA 0%, #9356DC 61%);
+  border: none;
+  color: #FFFFFF;
+  padding: 15px 20px;
+  border-radius: 22px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  align-self: center;
+}
+#explorer button:hover {
+  background: linear-gradient(163deg, #FF79DA 27%, #9356DC 82%);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  transform: scale(1.02);
+}
+
+#tuto {
+  max-width: 1300px;
+  margin: auto;
+  padding: 4rem 0;
+}
+#tuto h2 {
+  margin: 1rem 0;
+}
+#tuto #etapes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#tuto #etapes .etape {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 95%;
+  padding: 10px;
+  margin: 10px 0;
+  background-color: #F6F6F6;
+  border-radius: 25px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+#tuto #etapes .etape:hover {
+  background-color: #F5EDFF;
+}
+#tuto #etapes .etape:hover > i {
+  color: #9356DC;
+}
+#tuto #etapes .etape * {
+  margin-right: 2rem;
+}
+#tuto #etapes .etape .circle {
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  padding: 2px;
+  background: #9356DC;
+  color: #FFFFFF;
+  text-align: center;
+  margin-left: -2rem;
+}
+
+.restaurant-list-container {
+  background-color: #F6F6F6;
+}
+.restaurant-list-container #restaurants {
+  display: grid;
+  padding: 4rem 0;
+  max-width: 1300px;
+  margin: auto;
+}
+.restaurant-list-container #restaurants article {
+  background-color: #FFFFFF;
+  border-radius: 15px;
+  margin: 5px 5px 20px 5px;
+  box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.05), 0 4px 4px 0 rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+}
+.restaurant-list-container #restaurants article:hover {
+  transform: scale(1.01);
+}
+.restaurant-list-container #restaurants article a {
+  padding: 0;
+  position: relative;
+}
+.restaurant-list-container #restaurants article a img {
+  object-fit: cover;
+  height: 150px;
+  width: 100%;
+  border-radius: 15px 15px 0 0;
+}
+.restaurant-list-container #restaurants article a .new-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #99E2D0;
+  color: #008766;
+  width: 87px;
+  height: 32px;
+  position: absolute;
+  right: 1rem;
+  top: -12rem;
+}
+.restaurant-list-container #restaurants article a .lower-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.restaurant-list-container #restaurants article a .lower-card .card-text {
+  padding: 10px 15px;
+}
+.restaurant-list-container #restaurants article a .lower-card .card-text * {
+  margin: 0 0 5px 0;
+}
+.restaurant-list-container #restaurants article a .lower-card .favori {
+  font-size: 30px;
+  margin: 0 20px 10px 0;
+  cursor: pointer;
+}
+.restaurant-list-container #restaurants article a .lower-card .favori .fa-solid {
+  color: #9356DC;
+  display: none;
+  transition: opacity 0.5s;
+  opacity: 0.5;
+}
+.restaurant-list-container #restaurants article a .lower-card .favori .fa-solid:hover {
+  opacity: 1;
+}
+.restaurant-list-container #restaurants article a .lower-card .favori:hover {
+  opacity: 1;
+}
+.restaurant-list-container #restaurants article a .lower-card .favori:hover > .fa-solid {
+  display: unset;
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: 0;
+}
+.restaurant-list-container #restaurants article a .lower-card .favori:hover > .fa-regular {
+  display: none;
+}
+
+@media screen and (min-width: 1050px) {
+  #tuto #etapes {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  #tuto #etapes .etape {
+    width: 30%;
+  }
+  #restaurants {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 3%;
+  }
+  #restaurants h2 {
+    grid-column: 1/-1;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,32 @@
+// GLOBAL 
+$main-color : #9356DC;
+$second-color : #FF79DA;
+$third-color : #99E2D0;
+$white-color : #FFFFFF;
+$light-color : #DEEBFF;
+$dark-color : #EAEAEA;
+$darker-color : #353535;
+$back-color : #F6F6F6;
+$border-color: #D9D9D9;
+$soft-shadow-color: rgba(0, 0, 0, 0.05);
+$hard-shadow-color: rgba(0, 0, 0, 0.2);
+
+* {box-sizing : border-box}
+
+html {font-size : 62.5%}
+
+body {
+    font-family: 'Roboto', sans-serif; 
+    font-size: 1.8rem; 
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+h1{
+    font-family: 'Shrikhand', sans-serif; 
+}
+
+// End GLOBAL

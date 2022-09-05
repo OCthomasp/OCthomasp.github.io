@@ -9,20 +9,19 @@
 
 
         <link rel="stylesheet" type="text/css" href="css/normalize.css">
-        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
         
         <title>ohmyfood</title>
     </head>
     
     <body>
-        <header>
+        <header id="page_header">
             <a href="#">
                 <img src="img/logo/ohmyfood.png" alt="logo ohmyfood"/>
             </a>
         </header>
        
         <main>
-
             <div id="geo">
                 <i class="fa-solid fa-location-dot"></i>
                 <p>Paris, Belleville</p>
@@ -57,104 +56,106 @@
                 </div>
 
             </section>
+            <div class="restaurant-list-container">
+                <section id="restaurants">
+                    <h2>Restaurants</h2>
+                    
+                    <article>
+                        <a href="menuLPG.html">
+                            <img src="img\restaurants/jay-wennington.jpg" alt="La palette du goût">
+                            <div class="new-item">Nouveau</div>
+                            <div class="lower-card">
+                                <div class="card-text">
+                                    <h3>La palette du goût</h3>
+                                    <p>Ménilmontant</p> 
+                                </div>
 
-            <section id="restaurants">
-                <h2>Restaurants</h2>
-                
-                <article>
-                    <a href="menuLPG.html">
-                        <img src="img\restaurants/jay-wennington.jpg" alt="La palette du goût">
-                        <div class="new-item">Nouveau</div>
-                        <div class="lower-card">
-                            <div class="card-text">
-                                <h3>La palette du goût</h3>
-                                <p>Ménilmontant</p> 
+                                <div class="favori">
+                                    <i class="fa-regular fa-heart"></i>
+                                    <i class="fa-solid fa-heart fa-gradient"></i>
+                                </div>
                             </div>
 
-                            <div class="favori">
-                                <i class="fa-regular fa-heart"></i>
-                                <i class="fa-solid fa-heart"></i>
+                        </a>
+                    </article>
+
+                    <article>
+                        <a href="menuLNE.html">
+                            <img src="img\restaurants/stil.jpg" alt="La note enchantée">
+                            <div class="new-item">Nouveau</div>
+                            <div class="lower-card">
+                                <div class="card-text">
+                                    <h3>La note enchantée</h3>
+                                    <p>Charonne</p> 
+                                </div>
+
+                                <div class="favori">
+                                    <i class="fa-regular fa-heart"></i>
+                                    <i class="fa-solid fa-heart"></i>
+                                </div>
                             </div>
-                        </div>
 
-                    </a>
-                </article>
+                        </a>
+                    </article>
 
-                <article>
-                    <a href="#">
-                        <img src="img\restaurants/stil.jpg" alt="La note enchantée">
-                        <div class="new-item">Nouveau</div>
-                        <div class="lower-card">
-                            <div class="card-text">
-                                <h3>La note enchantée</h3>
-                                <p>Charonne</p> 
+                    <article>
+                        <a href="menuALF.html">
+                            <img src="img\restaurants/toa-heftiba.jpg" alt="À la française">
+                            <div class="lower-card">
+                                <div class="card-text">
+                                    <h3>À la française</h3>
+                                    <p>Cité Rouge</p> 
+                                </div>
+                                <div class="favori">
+                                    <i class="fa-regular fa-heart"></i>
+                                    <i class="fa-solid fa-heart"></i>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article>
+                        <a href="menuLDS.html">
+                            <img src="img\restaurants/louis-hansel.jpg" alt="Le délice des sens">
+                            <div class="lower-card">
+                                <div class="card-text">
+                                    <h3>Le délice des sens</h3>
+                                    <p>Folie-Méricourt</p> 
+                                </div>
+                                <div class="favori">
+                                    <i class="fa-regular fa-heart"></i>
+                                    <i class="fa-solid fa-heart"></i>
+                                </div>
                             </div>
 
-                            <div class="favori">
-                                <i class="fa-regular fa-heart"></i>
-                                <i class="fa-solid fa-heart"></i>
-                            </div>
-                        </div>
-
-                    </a>
-                </article>
-
-                <article>
-                    <a href="#">
-                        <img src="img\restaurants/toa-heftiba.jpg" alt="À la française">
-                        <div class="lower-card">
-                            <div class="card-text">
-                                <h3>À la française</h3>
-                                <p>Cité Rouge</p> 
-                            </div>
-                            <div class="favori">
-                                <i class="fa-regular fa-heart"></i>
-                                <i class="fa-solid fa-heart"></i>
-                            </div>
-                        </div>
-                    </a>
-                </article>
-
-                <article>
-                    <a href="#">
-                        <img src="img\restaurants/louis-hansel.jpg" alt="Le délice des sens">
-                        <div class="lower-card">
-                            <div class="card-text">
-                                <h3>Le délice des sens</h3>
-                                <p>Folie-Méricourt</p> 
-                            </div>
-                            <div class="favori">
-                                <i class="fa-regular fa-heart"></i>
-                                <i class="fa-solid fa-heart"></i>
-                            </div>
-                        </div>
-
-                    </a>
-                </article>
-            </section>
-
+                        </a>
+                    </article>
+                </section>
+            </div>
         </main>
 
         <footer>
-            <img src="img/logo/ohmyfood@2x.svg" alt="logo ohmyfood"/>
-            <nav>
-                <ul>
-                    <li>
-                        <a href="#">
-                            <i class="fa-solid fa-utensils"></i>
-                            Proposer un restaurant
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="fa-solid fa-handshake-angle"></i>
-                            Devenir partenaire
-                        </a>
-                    </li>
-                    <li><a href="#">Mentions légales</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </nav>    
+            <div class="footer-container">
+                <img src="img/logo/ohmyfood@2x.svg" alt="logo ohmyfood"/>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <i class="fa-solid fa-utensils"></i>
+                                Proposer un restaurant
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa-solid fa-handshake-angle"></i>
+                                Devenir partenaire
+                            </a>
+                        </li>
+                        <li><a href="#">Mentions légales</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>   
+            </div> 
         </footer>
 
     </body>

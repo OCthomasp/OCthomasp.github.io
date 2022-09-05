@@ -157,6 +157,7 @@ header .logo a img{
 }
 
 #menu form label{
+    opacity: 0;
     margin: 10px 0px;
     padding: 10px 15px 10px 10px;
     background-color: var(--white-color);
@@ -171,13 +172,12 @@ header .logo a img{
     overflow: hidden;
     /* max-width: 100%; */
 
+
+
 }
 
 
-/* EXPERIMENTAL */
-
-
-
+/* CHECKMARK */
 
 #menu form .exp{
     background-color: #fff;
@@ -240,8 +240,8 @@ header .logo a img{
 }
 
 #menu form .exp .checkmark-block{
-    height: 2rem;
-    width: 2rem;
+    height: 2.5rem;
+    width: 2.5rem;
     background-color: #fff;
     display: flex;
     align-items: center;
@@ -258,17 +258,71 @@ header .logo a img{
     }
 } 
 
+/*  FIN CHECKMARK */
 
-/* FIN EXPMTL */
+/* ANIM LOAD */
+@keyframes onLoad {
+    0% {
+        opacity: 0%;
+        transform: translateY(15%);
+    }
+    50%{
+        transform: translateY(-15%);
+        opacity: 25%;
+    }
+    100% {
+        opacity: 100%;
+        transform: translateY(0);
+    }
+}
+
+.order1{
+    animation: onLoad 1s ease-in-out forwards;
+    animation-delay: 0ms;
+}
+
+.order2{
+    animation: onLoad 1s ease-in-out forwards;
+    animation-delay: 200ms;
+}
+
+.order3{
+    animation: onLoad 1s ease-in-out forwards;
+    animation-delay: 400ms;
+}
+
+.order4{
+    animation: onLoad 1s ease-in-out forwards;
+    animation-delay: 600ms;
+}
+
+.order5{
+    animation: onLoad 1s ease-in-out forwards;
+    animation-delay: 800ms;
+}
+
+.order6{
+    animation: onLoad 1s ease-in-out forwards;
+    animation-delay: 1000ms;
+}
+
+.order7{
+    animation: onLoad 1s ease-in-out forwards;
+    animation-delay: 1200ms;
+}
+
+.order8{
+    animation: onLoad 1s ease-in-out forwards;
+    animation-delay: 1400ms;
+}
+
+.order9{
+    animation: onLoad 1s ease-in-out forwards;
+    animation-delay: 1600ms;
+}
 
 
-
-
-
-
-
-
-
+/* FIN ANIM LOAD */
 
 
 #menu form label h3{
@@ -370,9 +424,11 @@ footer ul li a{
     color: white;
 }
 
-@media screen and (min-width: 1030px) {
+/* @media screen and (min-width: 1030px) { */
+@media screen and (min-width: 1300px) {
     #menu{
-        width: auto;
+        width: 80%;
+        margin-left: 10%;
     }
 
     #menu form{
@@ -391,5 +447,9 @@ footer ul li a{
 
     #back-picture img{
         height: 430px;
+    }
+
+    footer{
+        padding-left: 10%;
     }
   }

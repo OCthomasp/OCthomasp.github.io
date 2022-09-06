@@ -69,6 +69,10 @@ footer .footer-container ul li a i {
   width: 18px;
 }
 
+#tuto h2, .restaurant-list-container #restaurants h2, footer {
+  padding-left: 1rem;
+}
+
 #page_header {
   display: flex;
   align-items: center;
@@ -250,7 +254,7 @@ footer .footer-container ul li a i {
   background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-clip: 0;
+  background-clip: text;
 }
 .restaurant-list-container #restaurants article a .lower-card .favori:hover > .fa-regular {
   display: none;
@@ -258,6 +262,7 @@ footer .footer-container ul li a i {
 
 @media screen and (min-width: 1050px) {
   #tuto #etapes {
+    padding-left: 1rem;
     flex-direction: row;
     justify-content: space-between;
   }

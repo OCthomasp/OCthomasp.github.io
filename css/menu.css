@@ -116,7 +116,7 @@ footer .footer-container ul li a i {
   background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-clip: 0;
+  background-clip: text;
 }
 .favori:hover > .fa-regular {
   display: none;

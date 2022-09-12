@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+        <meta name="author" content="Thomas P - https://github.com/OCthomasp/">
 
         <script src="https://kit.fontawesome.com/0234d32cff.js" crossorigin="anonymous"></script>
         <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
@@ -43,7 +44,8 @@
                     <fieldset>
                         <legend>Entrees</legend>
                         <input type="checkbox" id="poulpe" name="poulpe">
-                        <label for="poulpe" class="order1">
+                        <label for="poulpe">Tartare de poulpe acidulé aux zestes d'orange</label>
+                        <div class="plat order1">
                             <header>
                                 <h4>Tartare de poulpe acidulé</h4>
                                 <p>Aux zestes d'orange</p>
@@ -54,10 +56,11 @@
                                     <i class="fa-solid fa-check"></i>
                                 </div>
                             </div>
-                        </label>
+                        </div>
 
                         <input type="checkbox" id="veloute" name="veloute">
-                        <label for="veloute" class="order2">
+                        <label for="veloute">Velouté de légumes d'antan; carotte, panais, topinambour</label>
+                        <div class="plat order2">
                             <header>
                                 <h4>Velouté de légumes d'antan</h4>
                                 <p>Carotte, panais, topinambour</p>
@@ -68,10 +71,11 @@
                                     <i class="fa-solid fa-check"></i>
                                 </div>
                             </div>
-                        </label>
+                        </div>
                         
                         <input type="checkbox" id="soupe" name="soupe">
-                        <label for="soupe" class="order3">
+                        <label for="soupe">Soupe à l'oignon revisitée</label>
+                        <div class="plat order3">
                             <header>
                                 <h4>Soupe à l'oignon</h4>
                                 <p>Revisitée</p>
@@ -82,14 +86,15 @@
                                     <i class="fa-solid fa-check"></i>
                                 </div>
                             </div>
-                        </label>
+                        </div>
                         
                     </fieldset>
 
                     <fieldset>
                         <legend>Plats</legend>
                         <input type="checkbox" id="st-jacques" name="st-jacques">
-                        <label for="st-jacques" class="order4">
+                        <label for="st-jacques">Coquilles Saint-Jacques accompagnées d'une purée de panais</label>
+                        <div class="plat order4">
                             <header>
                                 <h4>Coquilles Saint-Jacques</h4>
                                 <p>Accompagnées d'une purée de panais</p>
@@ -100,11 +105,12 @@
                                     <i class="fa-solid fa-check"></i>
                                 </div>
                             </div>
-                        </label>
+                        </div>
                         
                         
                         <input type="checkbox" id="magret" name="magret">
-                        <label for="magret" class="order5">
+                        <label for="magret">Magret de canard et parmentier de pommes de terre</label>
+                        <div class="plat order5">
                             <header>
                                 <h4>Magret de canard</h4>
                                 <p>Et parmentier de pommes de terre</p>
@@ -115,10 +121,11 @@
                                     <i class="fa-solid fa-check"></i>
                                 </div>
                             </div>
-                        </label>
+                        </div>
                         
                         <input type="checkbox" id="pigeonneau" name="pigeonneau">
-                        <label for="pigeonneau" class="order6">
+                        <label for="pigeonneau">Pigeonneau d’Ille-et-Vilaine sur son lit de gnocchis aux légumes</label>
+                        <div class="plat order6">
                             <header>
                                 <h4>Pigeonneau d’Ille-et-Vilaine</h4>
                                 <p>Sur son lit de gnocchis aux légumes</p>
@@ -129,13 +136,15 @@
                                     <i class="fa-solid fa-check"></i>
                                 </div>
                             </div>
-                        </label>
+                        </div>
                     </fieldset>
 
                     <fieldset>
                         <legend>Desserts</legend>
+
                         <input type="checkbox" id="violette" name="violette">
-                        <label for="violette" class="order7">
+                        <label for="violette">Pétales de violettes glacés et purée de noisettes</label>
+                        <div class="plat order7">
                             <header>
                                 <h4>Pétales de violettes glacés</h4>
                                 <p>Et purée de noisettes</p>
@@ -146,10 +155,11 @@
                                     <i class="fa-solid fa-check"></i>
                                 </div>
                             </div>
-                        </label>
+                        </div>
                         
                         <input type="checkbox" id="fondant" name="fondant">
-                        <label for="fondant" class="order8">
+                        <label for="fondant">Fondant au chocolat revisité</label>
+                        <div class="plat order8">
                             <header>
                                 <h4>Fondant au chocolat</h4>
                                 <p>Revisité</p>
@@ -160,10 +170,11 @@
                                     <i class="fa-solid fa-check"></i>
                                 </div>
                             </div>
-                        </label>
+                        </div>
                         
                         <input type="checkbox" id="millefeuille" name="millefeuille">
-                        <label for="millefeuille" class="order9">
+                        <label for="millefeuille">Millefeuille croustillant; myrtilles et pâte d’amande</label>
+                        <div class="plat order9">
                             <header>
                                 <h4>Millefeuille croustillant</h4>
                                 <p>Myrtilles et pâte d’amande</p>
@@ -174,18 +185,11 @@
                                     <i class="fa-solid fa-check"></i>
                                 </div>
                             </div>
-                        </label>
-                        
+                        </div>
                     </fieldset>
-
                     <button type="submit" id="btn_commande">Commander</button>
-
                 </form>
-
-
-
             </section>
-
         </main>
 
         <footer>
@@ -211,7 +215,5 @@
                 </nav>   
             </div> 
         </footer>
-
     </body>
-
 </html>

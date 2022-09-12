@@ -44,10 +44,11 @@ h1 {
 
 footer {
   background-color: #353535;
-  padding: 15px 0 40px 0;
+  padding: 1.5rem 0 4rem 0;
 }
 footer .footer-container {
   max-width: 1300px;
+  padding-left: 1rem;
   margin: auto;
 }
 footer .footer-container img {
@@ -69,10 +70,57 @@ footer .footer-container ul li a i {
   width: 18px;
 }
 
-#tuto h2, .restaurant-list-container #restaurants h2, footer {
-  padding-left: 1rem;
+.loader-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.92);
+  animation: loader 2s forwards;
+  z-index: 100;
+}
+.loader-container .wheel {
+  background: linear-gradient(#FF79DA 22%, #9356DC 100%);
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  position: relative;
+  animation: spin 2s linear;
+}
+.loader-container .wheel::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  background: #fff;
 }
 
+@keyframes loader {
+  99% {
+    opacity: 1;
+    z-index: 100;
+  }
+  100% {
+    opacity: 0;
+    z-index: -999;
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(720deg);
+  }
+}
 #page_header {
   display: flex;
   align-items: center;
@@ -138,7 +186,7 @@ footer .footer-container ul li a i {
 #tuto {
   max-width: 1300px;
   margin: auto;
-  padding: 4rem 0;
+  padding: 4rem 0 4rem 1rem;
 }
 #tuto h2 {
   margin: 1rem 0;
@@ -188,6 +236,9 @@ footer .footer-container ul li a i {
   padding: 4rem 0;
   max-width: 1300px;
   margin: auto;
+}
+.restaurant-list-container #restaurants h2 {
+  padding-left: 1rem;
 }
 .restaurant-list-container #restaurants article {
   background-color: #FFFFFF;
@@ -243,9 +294,6 @@ footer .footer-container ul li a i {
   transition: opacity 0.5s;
   opacity: 0.5;
 }
-.restaurant-list-container #restaurants article a .lower-card .favori .fa-solid:hover {
-  opacity: 1;
-}
 .restaurant-list-container #restaurants article a .lower-card .favori:hover {
   opacity: 1;
 }
@@ -255,19 +303,21 @@ footer .footer-container ul li a i {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  opacity: 1;
 }
 .restaurant-list-container #restaurants article a .lower-card .favori:hover > .fa-regular {
   display: none;
 }
 
-@media screen and (min-width: 1050px) {
+@media screen and (min-width: 992px) {
   #tuto #etapes {
-    padding-left: 1rem;
+    padding: 0 1rem 0 2rem;
     flex-direction: row;
     justify-content: space-between;
   }
   #tuto #etapes .etape {
     width: 30%;
+    min-width: 30%;
   }
   #restaurants {
     grid-template-columns: repeat(2, 1fr);

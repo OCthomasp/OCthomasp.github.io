@@ -37,9 +37,6 @@
         display: none;
         transition: opacity .5s;
         opacity : 0.5;
-        &:hover{
-            opacity: 1;
-        }
     }
     &:hover{
         opacity: 1;
@@ -50,6 +47,7 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
+        opacity: 1;
     }
     &:hover>.fa-regular{
         display: none;
@@ -110,11 +108,11 @@ main{
                         bottom: 0;
                     }
                 }
-                input{
+                input, label{
                     position: absolute;
                     left: -9999px;
                 }
-                label{
+                .plat{
                     opacity : 0;
 
                     display: flex;
@@ -275,7 +273,7 @@ main{
     }
 }
 
-@media screen and (min-width: 1050px) {
+@media screen and (min-width: 992px) {
     main{
         #back-picture img{
             height: 430px;
@@ -287,6 +285,7 @@ main{
                 column-gap: 3%;
                 fieldset{
                     width: 30%;
+                    min-width: 30%;
                 }
                 #btn_commande{
                     width: 30%;

@@ -45,10 +45,11 @@ h1 {
 
 footer {
   background-color: #353535;
-  padding: 15px 0 40px 0;
+  padding: 1.5rem 0 4rem 0;
 }
 footer .footer-container {
   max-width: 1300px;
+  padding-left: 1rem;
   margin: auto;
 }
 footer .footer-container img {
@@ -105,9 +106,6 @@ footer .footer-container ul li a i {
   transition: opacity 0.5s;
   opacity: 0.5;
 }
-.favori .fa-solid:hover {
-  opacity: 1;
-}
 .favori:hover {
   opacity: 1;
 }
@@ -117,6 +115,7 @@ footer .footer-container ul li a i {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  opacity: 1;
 }
 .favori:hover > .fa-regular {
   display: none;
@@ -175,11 +174,11 @@ main #menu form fieldset legend::after {
   left: 0;
   bottom: 0;
 }
-main #menu form fieldset input {
+main #menu form fieldset input, main #menu form fieldset label {
   position: absolute;
   left: -9999px;
 }
-main #menu form fieldset label {
+main #menu form fieldset .plat {
   opacity: 0;
   display: flex;
   flex-flow: row wrap;
@@ -193,21 +192,21 @@ main #menu form fieldset label {
   cursor: pointer;
   max-width: 100%;
 }
-main #menu form fieldset label header, main #menu form fieldset label header > * {
+main #menu form fieldset .plat header, main #menu form fieldset .plat header > * {
   flex: 1;
   white-space: nowrap; /* pas de retour à la ligne */
   text-overflow: ellipsis; /* affiche "..." */
   overflow: hidden; /* cache le texte qui dépasse */
   margin: 0;
 }
-main #menu form fieldset label .prix {
+main #menu form fieldset .plat .prix {
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
   font-weight: 700;
   padding-left: 0.5rem;
 }
-main #menu form fieldset label .checkmark {
+main #menu form fieldset .plat .checkmark {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -216,7 +215,7 @@ main #menu form fieldset label .checkmark {
   margin: -1rem -7rem -1rem 1rem;
   transition-duration: 0.5s;
 }
-main #menu form fieldset label .checkmark .checkmark-block {
+main #menu form fieldset .plat .checkmark .checkmark-block {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -225,14 +224,14 @@ main #menu form fieldset label .checkmark .checkmark-block {
   background-color: #fff;
   border-radius: 100px;
 }
-main #menu form fieldset label .checkmark .checkmark-block i {
+main #menu form fieldset .plat .checkmark .checkmark-block i {
   font-size: 20px;
   color: #99E2D0;
 }
-main #menu form fieldset label:hover .checkmark {
+main #menu form fieldset .plat:hover .checkmark {
   margin-right: -1rem;
 }
-main #menu form fieldset label:hover .checkmark-block {
+main #menu form fieldset .plat:hover .checkmark-block {
   animation: rotation 0.5s;
 }
 @keyframes rotation {
@@ -314,7 +313,7 @@ main #menu form #btn_commande:hover {
   transform: scale(1.02);
 }
 
-@media screen and (min-width: 1050px) {
+@media screen and (min-width: 992px) {
   main #back-picture img {
     height: 430px;
   }
@@ -325,6 +324,7 @@ main #menu form #btn_commande:hover {
   }
   main #menu form fieldset {
     width: 30%;
+    min-width: 30%;
   }
   main #menu form #btn_commande {
     width: 30%;
